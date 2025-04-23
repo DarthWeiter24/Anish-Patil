@@ -83,6 +83,22 @@
 - **Using**: Day, week, month, year, and custom options in the left pane  
 - **To Discover**: If records of transactions are accurately reflected in each view
 
+---
+
+## Charter 12 - Premium Features
+
+**Explore** Dark mode, Passcode, Backup mode, adding new categories  
+**Using** Premium subscription  
+**To Discover** if functionality works as expected, user flows are successful, and premium users have a positive user experience
+
+---
+
+## Charter 13 - General Settings
+
+**Explore** Settings features like currency, language  
+**Using** Settings from Right Pane in home screen  
+**To Discover** smooth functionality and data integrity on settings change
+
 
 # Issue Summary Table (Prioritized by P0–P3 Scale)
 

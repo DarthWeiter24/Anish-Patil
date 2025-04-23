@@ -39,10 +39,13 @@ git clone <>
 
 ## Approach & Architecture
 
-
 ### Test Strategy
 
+The tests are structured using a modular API testing framework that emphasizes clean separation of responsibilities across packages such as endpoints, payload, tests, and utilities. 
+
 ### Architecture Overview
+
+![Screenshot 2025-04-23 222454](https://github.com/user-attachments/assets/eb74a192-f6f4-4a40-aac0-5403b1f7d999)
 
 ### Folder Structure
 
@@ -66,7 +69,16 @@ git clone <>
 
 ```
 
-### Classes 
+### Classes
+
+| Class/File                | Purpose                                                                                           |
+|---------------------------|---------------------------------------------------------------------------------------------------|
+| `Routes.java`             | Centralized file for defining static URLs.                      |
+| `StoreEndPoints.java`     | Contains methods that handle the actual HTTP requests (GET, POST, PUT, DELETE) to the store endpoints. |
+| `Store.java`              | POJO class that defines the structure of store-related request and response bodies.. |
+| `StoreTests.java`         | Test class that contains functional test cases for Store APIs |
+| `ExtentReportManager.java`| Utility class for setting up and managing ExtentReports. Handles HTML report creation and test result formatting. |
+
 
 ### Tech Stack
 
@@ -79,6 +91,18 @@ git clone <>
 ## Test Coverage
 
 ### Current Test Cases
+
+| Test Name                         | Purpose                                                                 |
+|----------------------------------|-------------------------------------------------------------------------|
+| testCreateOrder                  | Verifies that a valid order can be created successfully.               |
+| testValidOrder                   | Checks that the created order can be retrieved and has the correct ID. |
+| testGetInventory                 | Validates that inventory data is retrievable and includes "approved".  |
+| testDeleteValidOrder             | Confirms that an existing order can be deleted successfully.           |
+| testGetOrderWithInvalidId        | Ensures the API returns 404 for an invalid/nonexistent order ID.       |
+| testDeleteInvalidOrder           | Verifies that deleting an invalid order ID returns a 404 status.       |
+| testCreateOrderWithEmptyPayload  | Tests that creating an order with empty payload is rejected.           |
+| testCreateOrderWithNegativePetId | Tests that creating an order with invalid pet ID (negative) is not accepted.   |
+
 
 ### Test run
 #### Test Report

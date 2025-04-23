@@ -102,16 +102,16 @@
 
 # Issue Summary Table (Prioritized by P0–P3 Scale)
 
-| Priority | Charter     | Issue Description                                                                 | Notes / Impact                                                              |
-|----------|-------------|------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| P0       | Charter 1   | Free 7-day trial fails and causes app crash after payment via Play Store          | Core monetization feature broken; app crash = critical reliability issue    |
-| P0       | Charter 13  | Currency change only alters symbol, not value; affects historical accuracy        | Severe trust issue in financial app; impacts data integrity                 |
-| P1       | Charter 12  | Passcode set, but app reopens without requiring it                                | Security issue, but lower impact as it intermittently triggers              |
-| P1       | Charter 5   | Irrelevant results in search (e.g. “Food” shows cash transfers)                   | Data retrieval inconsistency; affects user confidence                       |
-| P2       | Charter 1   | Upsell screen shows on every app launch                                           | Negative UX; feels aggressive and repetitive                                |
-| P2       | Charter 4   | Filter only works in descending order                                             | Usability limitation; restricts data review flexibility                     |
-| P2       | Charter 5   | Search by category requires exact match; extra spaces not handled                 | Reduces discoverability; frustrating UX                                     |
-| P2       | Charter 12  | Passcode screen shows up delayed; boxes poorly aligned                            | UI polish issue; confusing for user                                         |
-| P3       | Charter 4   | UI text cutoff as list grows                                                      | Minor visual issue; impacts readability on longer lists                     |
-
+| No. | Priority | Charter     | Issue Description                                                                 | Notes / Impact                                                              |
+|-----|----------|-------------|------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| 1   | P0       | Charter 1   | Free 7-day trial fails and causes app crash after payment via Play Store          | Core monetization feature broken; app crash = critical reliability issue    |
+| 2   | P0       | Charter 13  | Currency change only alters symbol, not value; affects historical accuracy        | Severe trust issue in financial app; impacts data integrity                 |
+| 3   | P1       | Charter 12  | Passcode set, but app reopens without requiring it                                | Security issue, but lower impact as it intermittently triggers              |
+| 4   | P1       | Charter 5   | Irrelevant results in search (e.g. “Food” shows cash transfers)                   | Data retrieval inconsistency; affects user confidence                       |
+| 5   | P1       | Charter 7   | Flow for Google Drive sync successful, but no additional data appears in Drive    | Sync feedback misleading; creates confusion about data retention            |
+| 6   | P2       | Charter 1   | Upsell screen shows on every app launch                                           | Negative UX; feels aggressive and repetitive                                |
+| 7   | P2       | Charter 4   | Filter only works in descending order                                             | Usability limitation; restricts data review flexibility                     |
+| 8   | P2       | Charter 5   | Search by category requires exact match; extra spaces not handled                 | Reduces discoverability; frustrating UX                                     |
+| 9   | P2       | Charter 12  | Passcode screen shows up delayed; boxes poorly aligned                            | UI polish issue; confusing for user                                         |
+|10   | P3       | Charter 4   | UI text cutoff as list grows                                                      | Minor visual issue; impacts readability on longer lists                     |
 

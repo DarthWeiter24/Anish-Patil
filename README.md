@@ -115,6 +115,7 @@
 | 9           | Data Backup Functionalities    | Backups are a safety net, so I had to check if they work from start to finish      |
 | 8           | Export to File                 | Exporting data should just work — wanted to see if the file looked good and usable |
 | 10          | Record Transfer                | Reduced priority as long as all balance shows up correctly                        |
+| 11          | Change Calendar View           | Reduced priority. As long as transaction shows up correctly                       |
 
 # Test Run Summary
 <details>
@@ -189,6 +190,14 @@
     - Able to export data and open it as a CSV file.
     - New category and notes section correctly exported.
     - Updated data reflected in newly generated files.
+   
+   ### Charter 10:  Record Transfer
+   - **Observed:**
+     - Spot check. Record event showed up successfully
+
+   ### Charter 11: Change calendar view
+   - **Observed:**
+      - Spot check. Changed views reflected on home screen
 
 </details>
 

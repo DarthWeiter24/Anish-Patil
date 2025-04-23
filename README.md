@@ -207,3 +207,31 @@
 | 9   | P2       | Charter 12  | Passcode entry boxes poorly aligned                                               | UI polish issue                                        |
 |10   | P3       | Charter 4   | UI text cutoff as list grows                                                      | Minor visual issue; impacts readability on longer lists                     |
 
+# Risks in Monefy App
+
+1. **Data Integrity**  
+   Since this is an app that deals with financial data, users expect a higher level of data integrity. Issues like data corruption, incorrect currency conversion, or inconsistent balances erode user trust and need to be thoroughly tested.
+
+2. **Monetization Failure**  
+   Failure in core monetization flows, such as the 7-day trial, can lead to poor user experience and significant loss of revenue.
+
+3. **Security Risk**  
+   Since this app deals with sensitive user data, security testing must be handled with priority. Otherwise, it could lead to hacks, data leaks, and fraud.
+
+4. **Compliance and Legal Risk**  
+   Financial apps must comply with various legal and regulatory standards, such as GDPR for data protection. Non-compliance can result in fines, even if the app has free users.
+
+5. **Transactional and Calculation Errors**  
+   Since the core use case of this app revolves around numerical operations like adding, updating, and deleting entries, accuracy is critical. Any bugs in these operations will erode user trust and could cause a significant drop in the app’s user base.
+
+6. **Backup and Restore**  
+   Backup operations act as a safety net for users. Any bugs in this process can lead to the loss of user data, especially in situations like phone upgrades, app reinstallation, or unexpected failures. As such, this flow should be flawless to avoid catastrophic data loss.
+
+7. **Third-Party Service Dependence**  
+   Sync operations rely on services like Dropbox and Google Drive. Any failure in these services could significantly impact the user experience by preventing data synchronization, leading to confusion or data inconsistency.
+
+8. **User Experience Risk**  
+   Any issues that frustrate users—such as repetitive upsell screens, improperly formatted buttons or screens, or confusing navigation—can cause friction and lead to a loss of trust in the app. This can result in a drop in user retention and poor Play Store reviews.
+
+9. **Internationalization and Localization Risks**  
+   If the app is expected to be used in different locales, it should have good support for various languages, especially character-based languages like Chinese, Japanese, and right-to-left languages like Arabic. Additionally, the app relies heavily on symbols for operations without text, which can be interpreted differently in different regions. Currency conversions should also be supported, especially in the EU, where users travel between countries with different currencies.

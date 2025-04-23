@@ -40,9 +40,11 @@ git clone <>
 ### Test Results
 
 - Test results will be generated under:
-`app/build/reports/androidTests/connected/`
+`app/build/reports/androidTests/connected/debug`
 
-- Open `index.html` in a browser to view the test execution report.
+- Open the`.html` in a browser to view the test execution report.
+
+- Here is a report from a local run : [Test Run Report](https://github.com/DarthWeiter24/Anish-Patil/blob/main/Task2_MonefyUIAutomation/app/build/reports/androidTests/connected/debug/com.example.monefyuiautomation.tests.BaseTest.html)
 
 ## Approach & Architecture
 

@@ -99,12 +99,104 @@
 **Using** Settings from Right Pane in home screen  
 **To Discover** smooth functionality and data integrity on settings change
 
+# Test Prioritization
+
+| Charter No. | Charter Name                   | Why It Was Prioritized                                                             |
+|-------------|--------------------------------|------------------------------------------------------------------------------------|
+| 1           | First Time App Launch & Upsell | First impression and flow for a new user                                           |
+| 2           | Add Expense                    | Core usecase needed for balance tracking                                           |
+| 3           | Add Income                     | Core usecase needed for balance tracking                                           |
+| 4           | Check Balance Screen           | Summary screen uses both Expense and Income                                        |
+| 6           | Edit and Delete Transactions   | To check if entries are editable and errors can be deleted                         |
+| 12          | Premium Features               | Wanted to verify if premium users actually get the features they’re paying for     |
+| 5           | Search Transactions            | Search is super useful in a finance app, so checking if it’s accurate              |
+| 13          | General Settings               | Changing currency is a frequently used usecase especially in EU                    |
+| 7           | Google Drive Sync              | Synced the app with Drive to see if it actually backs things up properly           |
+| 9           | Data Backup Functionalities    | Backups are a safety net, so I had to check if they work from start to finish      |
+| 8           | Export to File                 | Exporting data should just work — wanted to see if the file looked good and usable |
+| 10          | Record Transfer                | Reduced priority as long as all balance shows up correctly                        |
+
+# Test Run Summary
+<details>
+  <summary>Click to expand: Test Runs Summary</summary>
+
+  ### Charter 1: First Time App Launch & Upsell
+  - **Observed:**
+    - Downloaded and installed from Playstore.
+    - First time app launch worked as expected.
+    - Upsell screen displayed and was closed to navigate to the home screen.
+    - Calendar view was changed and relaunching the app kept the same view on the home screen.
+  - **Issues:**
+    - First time launch offer for a free 7-day trial did not work, causing an app crash after going through Play Store payment.
+    - Upsell screen is displayed every time the app is closed and reopened, which feels pushy and disrupts user experience.
+    - Suggested: Display the upsell after a time-out (e.g., XX days) to remind users without being too aggressive.
+
+  ### Charter 2: Add Expense
+  - **Observed:**
+    - Added expense using the button at the bottom with different categories and notes.
+    - Also added an expense from icons listed on the home screen.
+
+  ### Charter 3: Add Income
+  - **Observed:**
+    - Tried adding different income categories with and without notes.
+    - Income reflected correctly on the home screen and balance.
+
+  ### Charter 4: Check Balance Screen
+  - **Observed:**
+    - Added expenses and income displayed on the Balance screen with notes and categories.
+    - Filter by date and amount worked as expected.
+  - **Issues:**
+    - Filter only works in descending order, no option to filter ascending, especially for cost.
+    - UI issue: As the list grows, text gets cut off abruptly over the buttons.
+
+  ### Charter 6: Edit and Delete Transactions
+  - **Observed:**
+    - Editing and deleting income works as expected.
+    - Editing and deleting expense updated the pie chart on the home screen.
+
+  ### Charter 12: Premium Features
+  - **Observed:**
+    - Dark mode works as expected.
+    - Able to add new categories in income and expense.
+    - New expense category shows up on the home screen.
+  - **Issues:**
+    - Passcode applied but does not work; the app opens without requiring the passcode.
+    - Passcode screen shows up after some time, and the entry box is misaligned with empty space at the bottom.
+
+  ### Charter 5: Search Transactions
+  - **Observed:**
+    - **Issues:**
+      - Search by category works only with the exact name, not partial terms (e.g., "Eating" doesn’t show results, only "Eating out").
+      - Extra space between words is not handled in search.
+      - Incorrect categories showing up in search (e.g., search for "Food" also shows Cash transfers).
+
+  ### Charter 13: General Settings
+  - **Observed:**
+    - **Issues:**
+      - Changing currency only alters the symbol, not the value. The amount displayed remains the same (e.g., $1000 changes to €1000).
+      - Past entries should remain in the original currency for consistency and trust.
+
+  ### Charter 7: Google Drive Sync
+  - **Observed:**
+    - **Issue:** Google Drive sync was successful, but no additional data appeared in the drive.
+
+  ### Charter 9: Data Backup Functionalities
+  - **Observed:**
+    - Successfully able to make a backup, clear data, and restore from the backup.
+
+  ### Charter 8: Export to File
+  - **Observed:**
+    - Able to export data and open it as a CSV file.
+    - New category and notes section correctly exported.
+    - Updated data reflected in newly generated files.
+
+</details>
 
 # Issue Summary Table (Prioritized by P0–P3 Scale)
 
 | No. | Priority | Charter     | Issue Description                                                                 | Notes / Impact                                                              |
 |-----|----------|-------------|------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| 1   | P0       | Charter 1   | Free 7-day trial fails and causes app crash after payment via Play Store          | Core monetization feature broken; app crash = critical reliability issue    |
+| 1   | P0       | Charter 1   | Free 7-day trial fails and causes app crash after payment via Play Store          | Core monetization feature broken; App crash = Reliability issue    |
 | 2   | P0       | Charter 13  | Currency change only alters symbol, not value; affects historical accuracy        | Severe trust issue in financial app; impacts data integrity                 |
 | 3   | P1       | Charter 12  | Passcode set, but app reopens without requiring it                                | Security issue, but lower impact as it intermittently triggers              |
 | 4   | P1       | Charter 5   | Irrelevant results in search (e.g. “Food” shows cash transfers)                   | Data retrieval inconsistency; affects user confidence                       |
@@ -112,6 +204,6 @@
 | 6   | P2       | Charter 1   | Upsell screen shows on every app launch                                           | Negative UX; feels aggressive and repetitive                                |
 | 7   | P2       | Charter 4   | Filter only works in descending order                                             | Usability limitation; restricts data review flexibility                     |
 | 8   | P2       | Charter 5   | Search by category requires exact match; extra spaces not handled                 | Reduces discoverability; frustrating UX                                     |
-| 9   | P2       | Charter 12  | Passcode screen shows up delayed; boxes poorly aligned                            | UI polish issue; confusing for user                                         |
+| 9   | P2       | Charter 12  | Passcode entry boxes poorly aligned                                               | UI polish issue                                        |
 |10   | P3       | Charter 4   | UI text cutoff as list grows                                                      | Minor visual issue; impacts readability on longer lists                     |
 

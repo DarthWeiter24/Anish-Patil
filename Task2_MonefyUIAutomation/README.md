@@ -83,10 +83,10 @@ General utilities for device interaction are under `utils/` package as `TestUtil
 | `HomeScreen.kt`       | Page object for interacting with the Home screen                        |
 | `AddExpenseScreen.kt` | Page object for interacting with the Add Expense screen                 |
 | `AddIncomeScreen.kt`  | Page object for interacting with the Add Income screen                  |
-| `BalanceScreen.kt`    | Page object for balance screen and balance computation                                    |
+| `BalanceScreen.kt`    | Page object for balance screen and balance computation                  |
 | `UpsellScreen.kt`     | Handles upsell modal shown during app launch                            |
-| `AddEntryUtils.kt`    | Utility class for handling common actions on Expense and Income Screen          |
-| `TestUtils.kt`        | Utility class for device interactions (e.g. UIWait, clicks etc)  |
+| `AddEntryUtils.kt`    | Utility class for handling common actions on Expense and Income Screen  |
+| `TestUtils.kt`        | Utility class for device interactions (e.g. UIWait, clicks etc)         |
 
 
 This approach makes the test suite scalable and easier to maintain as the app evolves.

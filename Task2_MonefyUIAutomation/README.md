@@ -90,3 +90,27 @@ General utilities for device interaction are under `utils/` package as `TestUtil
 
 This approach makes the test suite scalable and easier to maintain as the app evolves.
 
+## Tech Stack
+
+| Technology            | Why this?                                                                                                      |
+|-----------------------|----------------------------------------------------------------------------------------------------------------|
+| **Kotlin**             | Kotlin offers better syntax, is fully interoperable with Java, supports smart casting, and has enhanced support in Android Studio. |
+| **UIAutomator**        | UI Automator makes it easier to test apps where the source code is not available and is natively supported in Android Studio. It also supports testing across multiple apps, e.g., interacting with 3P apps like Google Drive. |
+| **JUnit4**             | JUnit simplifies test creation and execution with features like annotations (`@Test`, `@Before`) and assertions. |
+| **AndroidJUnitRunner** | Allows instrumentation test runs on both Android devices and emulators, enabling interaction with the app's UI. |
+
+
+---
+
+## Test Coverage
+
+### Current Test Cases
+
+| Test Name                  | Purpose                                                      |
+|----------------------------|--------------------------------------------------------------|
+| `test_01_LaunchMonefyLite`  | Launches the app and dismisses upsell modal                   |
+| `test_02_AddIncome`         | Adds income and verifies the new total                       |
+| `test_03_AddExpense`        | Adds expense and verifies the new total                      |
+| `test_04_BalanceIntegrity`  | Validates that balance = income - expense                    |
+| `test_05_checkBalanceScreen`| Compares Home vs Balance screen totals                       |
+

@@ -42,9 +42,8 @@ git clone <>
 - Test results will be generated under:
 `app/build/reports/androidTests/connected/debug`
 
-- Open the`.html` in a browser to view the test execution report.
+- Open the`.html` in a browser to view the test execution report. (See bottom for report of test run)
 
-- Here is a report from a local run : [Test Run Report](https://github.com/DarthWeiter24/Anish-Patil/blob/main/Task2_MonefyUIAutomation/app/build/reports/androidTests/connected/debug/com.example.monefyuiautomation.tests.BaseTest.html)
 
 ## Approach & Architecture
 
@@ -116,3 +115,8 @@ This approach makes the test suite scalable and easier to maintain as the app ev
 | `test_04_BalanceIntegrity`  | Validates that balance = income - expense                    |
 | `test_05_checkBalanceScreen`| Compares Home vs Balance screen totals                       |
 
+### Test run
+#### Test Report
+[Test Run Report](https://github.com/DarthWeiter24/Anish-Patil/blob/main/Task2_MonefyUIAutomation/app/build/reports/androidTests/connected/debug/com.example.monefyuiautomation.tests.BaseTest.html)
+#### Test run video
+[![Test Run Video](https://img.youtube.com/vi/pLR2C8oXtUA/0.jpg)](https://youtube.com/shorts/pLR2C8oXtUA?feature=share)

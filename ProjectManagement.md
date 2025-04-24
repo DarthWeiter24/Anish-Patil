@@ -14,13 +14,13 @@ To stay organized and maintain visibility into my progress, I created a **Notion
 
 ## Day 1: Exploration and Manual Testing
 
-I dedicated the first day to understanding the app and the scope of work. I began by **exploring the Monify Android app manually**, identifying core functionalities and potential test cases. In parallel, I researched **Android automation frameworks** and options for **API testing**, to begin shaping the tools and frameworks I’d use moving forward.
+I dedicated the first day to understanding the app and the scope of work. I began by **exploring the Monify Android app manually**, identifying core functionalities and potential test cases. In parallel, I researched **Android automation frameworks** and options for **API testing**, to begin shaping the tools and frameworks I’d use moving forward. I started populating the Notion board with tasks that needed to be done and came up with a rough breakdown on how many days I'd need to spend on each of the task.
 
 ---
 
 ## Android Automation
 
-Initially, I considered using **Appium** for Android automation. However, I encountered setup issues with it on my local environment. Given my past experience with native Android testing frameworks, I pivoted to using the **native Android testing stack** instead. This allowed me to move forward more efficiently and maintain confidence in the quality of my tests.
+Initially, I considered using **Appium** for Android automation. However, I encountered setup issues with it on my local environment. Given my past experience with native Android testing frameworks, I pivoted to using the **native Android testing stack** instead. This allowed me to quickly come with a working proof of concept, add screens and tests and get the test results. 
 
 ---
 
@@ -32,4 +32,17 @@ For API testing, I evaluated a few different tools and languages. Although I hav
 
 ## Workflow and Delivery
 
-Throughout the project, I kept myself accountable using the Notion board, which served as both a project tracker and a self-imposed deadline manager. Once I had completed a **proof of concept for each section**, I structured my work into a clean **GitHub repository**, adding clear documentation and examples. This ensured the submission was not only functional but also easy to navigate and review.
+Throughout the project, I kept myself accountable using the Notion board, which served as both a project tracker and a self-imposed deadline manager. Once I had completed a **proof of concept for each section**, I structured my work into a clean **GitHub repository**, adding clear documentation and examples.
+
+---
+## Author's note
+
+This was a genuinely fun and interesting exercise. While I’ve worked with most of the tech stack before, getting the chance to build everything from scratch was indeed a learning experince.
+I’ve tried to document my thought process and approach as clearly as possible. But as with any project, there are lots of small decisions, trade-offs, and little moments that don’t always make it into the documentation.
+If there’s a chance to walk through the project live, I’d love that. It’d be great to chat through my approach in more depth, share some of the things I learned, and also talk a bit about my experience and career journey so far.
+
+Thanks again for the opportunity!!
+
+~ Anish Patil
+
+

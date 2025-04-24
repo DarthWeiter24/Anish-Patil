@@ -13,7 +13,7 @@
 #### 1. Clone the Repository
 
 ```bash
-git clone <>
+git clone https://github.com/DarthWeiter24/Anish-Patil.git
 ```
 ### 2. Open in Your IDE
 

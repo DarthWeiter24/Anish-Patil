@@ -109,3 +109,5 @@ The tests are structured using a modular API testing framework that emphasizes c
 
 [Test Run Report](https://github.com/DarthWeiter24/Anish-Patil/blob/main/Task3_PetstoreAPIAutomation/reports/TestReport-2025-04-22_21-38-06.html)
 
+### Author's note
+You will also see code related to User class in this folder. That is because I initially started with automating that end points. However I ran into 500 error from the server on Create User operation. I also checked directly on Swagger and found the same result. While this would have been interesting to showcase that my test actually caught this error, it would have caused furhter cascading errors in read, update and delete operations. I thought about hosting the service locally, but due to time constraint and not wanting to go beyond the scope of this exercise, I decided the easiest approach would be go with Store APIs instead. I have however left both User and Store tests in the folder to showcase my work.

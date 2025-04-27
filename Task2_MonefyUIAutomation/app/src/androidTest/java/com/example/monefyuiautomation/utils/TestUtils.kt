@@ -10,9 +10,11 @@ import androidx.test.uiautomator.Until
 
 class TestUtils {
     companion object {
+        // Initialize UiDevice instance for interacting with the device
         private val device: UiDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
         private const val TAG = "MonefyTest"
 
+        // Launch the app with the given package name
         fun launchApp(packageName: String) {
             try {
                 val context = InstrumentationRegistry.getInstrumentation().context
@@ -43,27 +45,37 @@ class TestUtils {
             }
         }
 
+        // Click element by resource ID (without waiting)
         fun clickElement_(resourceId: String) {
             device.findObject(By.res(resourceId)).click()
         }
 
+        // Clicks a UI element by its resource ID after waiting for it to appear.
         fun clickElement(resourceId: String) {
             waitForElement(resourceId)
             clickElement_(resourceId)
         }
 
+        // Click element by content description
         fun clickElementByContentDesc(contentDesc: String) {
             device.findObject(By.desc(contentDesc)).click()
         }
 
-        fun waitForElement(resourceId: String, timeout: Long = 5000): Boolean {
-            return device.wait(Until.hasObject(By.res(resourceId)), timeout)
+        // Wait for an element by resource ID, option to throw error if not found (enabled by default)
+        fun waitForElement(resourceId: String, timeout: Long = 5000, throwIfNotFound: Boolean = true): Boolean {
+            val found = device.wait(Until.hasObject(By.res(resourceId)), timeout)
+            if (!found && throwIfNotFound) {
+                throw AssertionError("Element with resourceId \"$resourceId\" not found within $timeout ms")
+            }
+            return found
         }
 
+        // Click element by visible text
         fun clickElementByText(text: String) {
             device.findObject(By.text(text)).click()
         }
 
+        // Get text content of element by resource ID
         fun getText(resourceId: String): String {
             return device.findObject(By.res(resourceId)).text
         }

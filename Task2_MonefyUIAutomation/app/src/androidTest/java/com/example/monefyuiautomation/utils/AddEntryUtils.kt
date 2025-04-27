@@ -25,11 +25,13 @@ class AddEntryUtils {
         const val BACK_BUTTON = "Navigate up"
         const val CHOOSE_CATEGORY = "com.monefy.app.lite:id/keyboard_action_button"
 
+        // Click the back button and return to HomeScreen
         fun clickBackButton(): HomeScreen {
             TestUtils.clickElementByContentDesc(BACK_BUTTON)
             return HomeScreen()
         }
 
+        // Check if all elements are present
         fun checkElementPresent() {
             TestUtils.waitForElement(BUTTON_0)
             TestUtils.waitForElement(BUTTON_1)
@@ -49,9 +51,9 @@ class AddEntryUtils {
             TestUtils.waitForElement(BUTTON_DOT)
             TestUtils.waitForElement(BUTTON_CLEAR)
             TestUtils.waitForElement(CHOOSE_CATEGORY)
-            TestUtils.waitForElement(BACK_BUTTON)
         }
 
+        // Enter the input string and perform calculations
         fun performCalculation(input: String) {
             checkElementPresent()
             input.forEach { char ->
@@ -76,10 +78,8 @@ class AddEntryUtils {
                 }
             }
         }
-        fun clickOne(){
-            TestUtils.clickElement(BUTTON_1)
-        }
 
+        // Click to choose category
         fun clickChooseCategory() {
             TestUtils.clickElement(CHOOSE_CATEGORY)
         }
